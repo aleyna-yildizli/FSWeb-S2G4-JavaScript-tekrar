@@ -1,6 +1,6 @@
 /* Aşağıda global olarak tanımlanmış değişkenler bulunmaktadır, bunları değiştirmeyiniz. Açıklamaları takip ederek görevleri tamamlayın. */
 
-console.log("Aleyna Yıldızlı")
+console.log("Aleyna Yıldızlı");
 const pi = 3.14159;
 
 const sayilar = [
@@ -51,11 +51,15 @@ function KareninAlani(kenaruzunlugu) {
 	4. Hesaplanan çemberin çevresi döndürülecektir.
 */
 
-function CemberinCevresi(/* kodlar buraya */) {
-  /* kodlar buraya */
+function CemberinCevresi(yaricap) {
+  return yaricap * 2 * pi;
 }
 
+
+
+
 /* (Oto test yok) Yukarıdaki CemberinCevresi fonksiyonunu yarıçap = 5 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
+
 
 /* 	GÖREV 2:  
 - CemberinAlani fonksiyonunu kullanarak aşağıdaki yönergeleri uygulayın:
@@ -65,8 +69,8 @@ function CemberinCevresi(/* kodlar buraya */) {
 	4. Hesaplanan çemberin alanı döndürülecektir.
 */
 
-function CemberinAlani(/* kodlar buraya */) {
-  /* kodlar buraya */
+function CemberinAlani(yaricap, pi) {
+  return pi * Math.pow(yaricap,2);
 }
 
 /* (Oto test yok) Yukarıdaki CemberinAlani fonksiyonunu yarıçap = 15 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
@@ -100,23 +104,46 @@ let ucetambolunenler,
 
 // 3a çözümü
 
-/* kodlar buraya */
+
+for (let i = 1; i < sayilar.length; i++) {
+    if (sayilar[i] > enbuyuk) {
+        enbuyuk = sayilar[i];
+    }
+    if (sayilar[i] < enkucuk) {
+        enkucuk = sayilar[i];
+    }
+}
+
+
 
 // 3b çözümü:
 
-/* kodlar buraya */
+
+
+sayilar.forEach((sayi) => {
+    if (sayi % 3 === 0) {
+        ucetambolunenler.push(sayi);
+    }
+});
+
 
 // 3c çözümü:
 
-/* kodlar buraya */
+
+
+ ucetambolunenler.reduce((total, value) => total + value, 0);
+
 
 // 3d çözümü
 
-/* kodlar buraya */
+ sayilar.filter((sayi) => sayi < 500);
+
 
 // 3e çözümü
+//slice metodu diziyi kopyalar sort sıralar ve siralisayilara atar
 
-/* kodlar buraya */
+ besyuzdenkucuksayilar.slice().sort((a, b) => a - b);
+
 
 // 3f çözümü
 
